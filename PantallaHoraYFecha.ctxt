@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=PantallaHoraYFecha
+comment1.params=
+comment1.target=PantallaHoraYFecha()
+comment2.params=
+comment2.target=java.lang.String\ getFechaYHora()
+numComments=3

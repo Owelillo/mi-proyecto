@@ -53,7 +53,14 @@ public class PantallaHoraYFecha
         if (ano.getValorAlmacenado() > 99) {
             ano.setValorAlmacenado(1);
         }
-
+    }
+    
+    public void fijarFechaYHora(int hora, int minutos, int dia, int mes, int ano){
+        this.hora.setValorAlmacenado(hora);
+        this.minutos.setValorAlmacenado(minutos);
+        this.dia.setValorAlmacenado(dia);
+        this.mes.setValorAlmacenado(mes);
+        this.ano.setValorAlmacenado(ano);
     }
 }
 

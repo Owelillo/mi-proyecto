@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=java.lang.String\ getFechaYHora()
 comment3.params=
 comment3.target=void\ avanzarMinuto()
-numComments=4
+comment4.params=hora\ minutos\ dia\ mes\ ano
+comment4.target=void\ fijarFechaYHora(int,\ int,\ int,\ int,\ int)
+numComments=5

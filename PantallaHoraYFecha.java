@@ -8,10 +8,10 @@ public class PantallaHoraYFecha
 
     public PantallaHoraYFecha()
     {
-        int valorInicial = 1;
+        int valorInicial = 0;
         int limitePantallaDia = 32;
         int limitePantallaMes = 13;
-        int limitePantallaAno = 100;
+        int limitePantallaAno = 2100;
         int limitePantallaHora = 24;
         int limitePantallaMinutos = 60;
 
@@ -30,26 +30,29 @@ public class PantallaHoraYFecha
     public void avanzarMinuto(){ 
         minutos.incrementaValorAlmacenado();
 
-        if (minutos.getValorAlmacenado() == 0){
+        if (minutos.getValorAlmacenado() == 0) {
             hora.incrementaValorAlmacenado();
-        }
-        
-        if (hora.getValorAlmacenado() == 0) {
-            dia.incrementaValorAlmacenado();
-        }
-        if (dia.getValorAlmacenado() > 30) {
-            dia.setValorAlmacenado(1);
-            mes.incrementaValorAlmacenado();
-        }
-        if (mes.getValorAlmacenado() > 12) {
-            mes.setValorAlmacenado(1);
-            ano.incrementaValorAlmacenado();
-        }
-        if (ano.getValorAlmacenado() > 99) {
-            ano.setValorAlmacenado(1);
+
+            if (hora.getValorAlmacenado() == 0) {
+                dia.incrementaValorAlmacenado();
+
+                if (dia.getValorAlmacenado() > 30) {
+                    dia.setValorAlmacenado(1);
+                    mes.incrementaValorAlmacenado();
+
+                    if (mes.getValorAlmacenado() > 12) {
+                        mes.setValorAlmacenado(1);
+                        ano.incrementaValorAlmacenado();
+
+                        if (ano.getValorAlmacenado() > 99) {
+                            ano.setValorAlmacenado(1);
+                        }
+                    }
+                }
+            }
         }
     }
-    
+
     public void fijarFechaYHora(int hora, int minutos, int dia, int mes, int ano){
         this.hora.setValorAlmacenado(hora);
         this.minutos.setValorAlmacenado(minutos);

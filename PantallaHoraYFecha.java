@@ -33,12 +33,7 @@ public class PantallaHoraYFecha
         if (minutos.getValorAlmacenado() == 0){
             hora.incrementaValorAlmacenado();
         }
-        minutos.incrementaValorAlmacenado();
-
-        if (minutos.getValorAlmacenado() == 0) {
-
-            hora.incrementaValorAlmacenado();
-        }
+        
         if (hora.getValorAlmacenado() == 0) {
             dia.incrementaValorAlmacenado();
         }
